@@ -1,32 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+  
+.App {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 120px;
+  background-image: linear-gradient(120deg, #ffffff 0%, #e6e6e6 100%);
+}
+.heading{
+  font-family: 'Pacifico', cursive;
+  font-size: 35px;
+}
+.container{
+  height: 300px;
+  width: 800px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+input{
+  padding-left: 5px;
+  font-size: 20px;
+  height: 36px;
+}
+.middle,.right{
+  width: 120px;
+}
+.switch{
+  padding: 5px;
+  margin-top: 25px;
+  background-color: rgb(226, 252, 184);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.result{
+  box-sizing: border-box;
+  width: 800px;
+  padding-left: 30px;
+}
+button{
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  border: 2px solid forestgreen;
+  background-color: rgb(226, 252, 184);
+  cursor: pointer;
+}
+p,h3, button, .switch{
+  color: forestgreen;
+}
+p{
+  font-size: 30px;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    width: 20%;
+    height: auto;
+    animation: App-logo-spin infinite 2s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +77,53 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.normal-image {
+  width: 20%;
+  transition: transform 0.5s; /* Agrega una transición suave */
+}
+
+.flipped-image {
+  width: 20%;
+  transform: scaleX(-1); /* Voltea horizontalmente */
+  transition: transform 0.5s; /* Agrega una transición suave */
+}
+
+.falling-text {
+  font-size: 24px;
+  transition: transform 1s ease-out;
+}
+
+.fall {
+  transform: translateY(300px); /* Cambia la distancia de caída según tus preferencias */
+}
+
+
+.background-page {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* Otros estilos para el contenido de la página */
+}
+
+.with-gif {
+  background-image: url('./efect.gif');
+}
+
+.white{
+  color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-with-gif {
+  display: flex;
+  align-items: center;
+}
+
+.gif {
+  width: 150px; /* Ajusta el ancho del GIF según tus preferencias */
+  height: auto;
+  margin-left: 10px; /* Ajusta el margen según tus preferencias */
 }
